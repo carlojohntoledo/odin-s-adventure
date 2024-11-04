@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr6n17mcqcqjf"]
+
+[ext_resource type="Script" path="res://Scripts/obstacles.gd" id="1_t374f"]
+[ext_resource type="Texture2D" uid="uid://cb0rcuqhtkwyl" path="res://Assets/2D Sprites/Objects Sprite/Log Sprite.png" id="1_ufxln"]
+
+[node name="Treess" type="Area2D" groups=["tree"]]
+position = Vector2(1227, 593)
+script = ExtResource("1_t374f")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -28)
+scale = Vector2(0.150939, 0.14215)
+texture = ExtResource("1_ufxln")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -28)
+scale = Vector2(0.150939, 0.14215)
+polygon = PackedVector2Array(79.5024, -225.114, 79.5024, -189.94, 99.3784, -189.94, 92.7524, -154.766, 79.5024, -126.627, 71, -77, 66.2524, -28.1394, 78, 25, 80.9, 80, -19.8755, 274.358, -39.751, 274.358, -59.6265, 274.358, -79.502, 239.184, -106.003, 218.079, -139.129, 196.975, -172, 194, -195.7, 137, -205.9, 90.5, -165.63, 77.3831, -165.63, 56.2786, -152.379, 56.2786, -152.379, 28.1394, -145.754, 28.1394, -134.8, 44, -99.3774, 70.3481, -56, 75, -39.751, 28.1394, -35, -75.4, -34.9, -159, -4, -179.4, 4, -193.7, 6.62549, -211.045, 39.7515, -239.184)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

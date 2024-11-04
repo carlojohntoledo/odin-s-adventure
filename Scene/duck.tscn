@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://d06k0b4gdtkt7"]
+
+[ext_resource type="Script" path="res://Scripts/Duck.gd" id="1_g8qh3"]
+[ext_resource type="Texture2D" uid="uid://br6kkg3hutptj" path="res://Assets/2D Sprites/Background Sprite/Duck/duck1.png" id="2_luqfc"]
+[ext_resource type="Texture2D" uid="uid://coblskrtsbxr2" path="res://Assets/2D Sprites/Background Sprite/Duck/duck2.png" id="3_r5miw"]
+[ext_resource type="Texture2D" uid="uid://d4i4h2fr5hghx" path="res://Assets/2D Sprites/Background Sprite/Duck/duck3.png" id="4_g4n8e"]
+[ext_resource type="Texture2D" uid="uid://cfgraxo03o04c" path="res://Assets/2D Sprites/Background Sprite/Duck/duck4.png" id="5_2b2nj"]
+[ext_resource type="Texture2D" uid="uid://dqgnjfo640c3e" path="res://Assets/2D Sprites/Background Sprite/Duck/duck5.png" id="6_xgrq4"]
+[ext_resource type="Texture2D" uid="uid://buvwnkfxo5iie" path="res://Assets/2D Sprites/Background Sprite/Duck/duck6.png" id="7_61vfe"]
+[ext_resource type="Texture2D" uid="uid://buky4fqsddwpi" path="res://Assets/2D Sprites/Background Sprite/Duck/duck7.png" id="8_wxsoc"]
+[ext_resource type="Texture2D" uid="uid://dfcspukq2a0d3" path="res://Assets/2D Sprites/Background Sprite/Duck/duck8.png" id="9_5i0pv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtp7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_luqfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r5miw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g4n8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2b2nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xgrq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_61vfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wxsoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5i0pv")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_emo1n"]
+
+[node name="Duck" type="Area2D" groups=["ducks", "tree"]]
+position = Vector2(1305, 196)
+script = ExtResource("1_g8qh3")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-88.75, -86)
+scale = Vector2(0.281377, 0.225225)
+sprite_frames = SubResource("SpriteFrames_gtp7k")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-91, -87)
+shape = SubResource("CircleShape2D_emo1n")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited" flags=18]

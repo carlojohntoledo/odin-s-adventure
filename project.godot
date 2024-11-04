@@ -1,0 +1,96 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Odin's Adventure"
+config/description="Odin's Adventure\" is a delightful 2D platform game with a charming twist – the hero of this epic journey is none other than Odin, a lovable and determined dog! In this heartwarming and action-packed game, players take on the role of Odin as he embarks on an exhilarating adventure through a vibrant and nostalgic world.
+
+Much like the classic Dino Chrome game, players must guide Odin to leap over a variety of tree obstacles that appear in his path.
+
+As players master their jumping skills, they can achieve higher scores. With its endearing character and addictive gameplay, \"Odin's Adventure\" is sure to captivate players of all ages, offering a joyful and entertaining experience that celebrates the spirit of adventure in the most charming way possible. Join Odin on his quest for the highest score and discover a world of fun and canine charisma."
+run/main_scene="res://Scene/menu.tscn"
+config/features=PackedStringArray("4.1", "GL Compatibility")
+run/max_fps=120
+config/icon="res://Assets/2D Sprites/Main Menu Sprites/golden retrieve 0.png"
+
+[autoload]
+
+SoundFx="*res://Scripts/SoundFx.gd"
+SceneTransition="*res://Scene/scene_transition.tscn"
+SceneReload="*res://Scene/scene_reload.tscn"
+GlobalVariables="*res://Scripts/GlobalVariables.gd"
+HighScoreManager="*res://Scripts/HighScoreManager.gd"
+SliderValues="*res://Scripts/slider_values.gd"
+
+[display]
+
+window/size/always_on_top=true
+window/size/extend_to_title=true
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://Assets/2D Sprites/Icons/Paw.png"
+
+[editor]
+
+export/convert_text_resources_to_binary=false
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+_on_resize={
+"deadzone": 0.5,
+"events": []
+}
+resized={
+"deadzone": 0.5,
+"events": []
+}
+jump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+]
+}
+_on_button_pressed={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+timeout={
+"deadzone": 0.5,
+"events": []
+}
+down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+tap={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+doubletap={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

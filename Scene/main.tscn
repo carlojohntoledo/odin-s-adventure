@@ -1,0 +1,427 @@
+[gd_scene load_steps=50 format=3 uid="uid://b1iy8sj674efg"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_7s503"]
+[ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="3_0ek66"]
+[ext_resource type="Texture2D" uid="uid://d1aw4wl4xgwt0" path="res://Assets/2D Sprites/Background Sprite/1.png" id="4_36ima"]
+[ext_resource type="Texture2D" uid="uid://bunpcfkvvgmww" path="res://Assets/2D Sprites/Background Sprite/2.png" id="5_ii7ld"]
+[ext_resource type="Texture2D" uid="uid://4mcgs4eavl33" path="res://Assets/2D Sprites/Background Sprite/3.png" id="6_2sq21"]
+[ext_resource type="Texture2D" uid="uid://chg1lsqujvwgx" path="res://Assets/2D Sprites/Background Sprite/4.png" id="7_adb41"]
+[ext_resource type="Texture2D" uid="uid://dq6scbf7iqdn2" path="res://Assets/2D Sprites/Objects Sprite/Ground Sprite 1.png" id="8_1l848"]
+[ext_resource type="Texture2D" uid="uid://cbllvjuhlw6by" path="res://Assets/icon.svg" id="8_cl1iy"]
+[ext_resource type="Script" path="res://Scripts/Odin.gd" id="8_nv530"]
+[ext_resource type="Texture2D" uid="uid://b84bn6777sbll" path="res://Assets/2D Sprites/Player Sprite/Hurt/Hurt1.png" id="9_d2v8n"]
+[ext_resource type="Texture2D" uid="uid://4khjdmyujnpf" path="res://Assets/2D Sprites/Player Sprite/Hurt/Hurt2.png" id="10_c1ark"]
+[ext_resource type="Texture2D" uid="uid://bnyux7obvdf8y" path="res://Assets/2D Sprites/Player Sprite/Hurt/Hurt3.png" id="11_xbprs"]
+[ext_resource type="Texture2D" uid="uid://d1of8q8sfqkjg" path="res://Assets/2D Sprites/Player Sprite/Hurt/Hurt4.png" id="12_bglq2"]
+[ext_resource type="Texture2D" uid="uid://cw7gnjy50pnr7" path="res://Assets/2D Sprites/Player Sprite/Run/Run9.png" id="13_73ixs"]
+[ext_resource type="Texture2D" uid="uid://dqw1lls706pa0" path="res://Assets/2D Sprites/Player Sprite/Run/Run1.png" id="15_tvqlj"]
+[ext_resource type="Texture2D" uid="uid://bq0o6phtqfyef" path="res://Assets/2D Sprites/Player Sprite/Run/Run2.png" id="16_anuc4"]
+[ext_resource type="Texture2D" uid="uid://07iw8fbjmkj0" path="res://Assets/2D Sprites/Player Sprite/Run/Run3.png" id="17_tntyy"]
+[ext_resource type="Texture2D" uid="uid://c1mvyrsa00gov" path="res://Assets/2D Sprites/Player Sprite/Run/Run4.png" id="18_atqr5"]
+[ext_resource type="Script" path="res://Scripts/Highscore.gd" id="19_gfkei"]
+[ext_resource type="Texture2D" uid="uid://cfqeokmkjk5ix" path="res://Assets/2D Sprites/Player Sprite/Run/Run5.png" id="19_i00nc"]
+[ext_resource type="Texture2D" uid="uid://lf3tc88svldw" path="res://Assets/2D Sprites/Player Sprite/Run/Run6.png" id="20_ra1i3"]
+[ext_resource type="Texture2D" uid="uid://bddj8hp5y08nr" path="res://Assets/2D Sprites/Player Sprite/Run/Run7.png" id="21_lv1is"]
+[ext_resource type="FontFile" uid="uid://bbvxijaalpggu" path="res://Assets/Fonts/Sparky Stones.ttf" id="22_7cpln"]
+[ext_resource type="Texture2D" uid="uid://bee6p4gr4qlmj" path="res://Assets/2D Sprites/Player Sprite/Run/Run8.png" id="22_bf5wv"]
+[ext_resource type="StyleBox" uid="uid://cltyrerl7bkiy" path="res://Assets/Tres/Restart_button_Normal.tres" id="23_ge6sp"]
+[ext_resource type="StyleBox" uid="uid://r1obd1cxxxl0" path="res://Assets/Tres/Menu_button_Normal.tres" id="24_jsy0s"]
+[ext_resource type="StyleBox" uid="uid://bs5t88my8ekk3" path="res://Assets/Tres/Restart_button_Hover.tres" id="24_undix"]
+[ext_resource type="StyleBox" uid="uid://bhfhr6khhuab8" path="res://Assets/Tres/Menu_button_Pressed.tres" id="25_0l0xl"]
+[ext_resource type="StyleBox" uid="uid://ndauv3i1i23w" path="res://Assets/Tres/Menu_button_Hover.tres" id="25_spmsf"]
+[ext_resource type="StyleBox" uid="uid://c5y5m42x3dino" path="res://Assets/Tres/settings_button_normal.tres" id="27_gmula"]
+[ext_resource type="AudioStream" uid="uid://figue2qkyja5" path="res://Assets/Soundtracks/Spring-Flowers(chosic.com).mp3" id="28_b2p4l"]
+[ext_resource type="AudioStream" uid="uid://bt6qitx16yyo4" path="res://Assets/Soundtracks/jump.mp3" id="29_ghm6o"]
+[ext_resource type="AudioStream" uid="uid://dlkee0se56xfc" path="res://Assets/Soundtracks/sad1.mp3" id="30_ncasa"]
+[ext_resource type="AudioStream" uid="uid://dv8ivqeehb0u1" path="res://Assets/Soundtracks/sad2.mp3" id="31_bjqnx"]
+[ext_resource type="AudioStream" uid="uid://clndsay46cx12" path="res://Assets/Soundtracks/bark_twice.wav" id="32_kmwgf"]
+[ext_resource type="AudioStream" uid="uid://bejeh6jko7haw" path="res://Assets/Soundtracks/pant.mp3" id="32_mhgoo"]
+[ext_resource type="AudioStream" uid="uid://c3kt4rklpx0ei" path="res://Assets/Soundtracks/hit.wav" id="34_50ajm"]
+[ext_resource type="AudioStream" uid="uid://drhtwjsaw5jko" path="res://Assets/Soundtracks/button.wav" id="35_eegfw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgo0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_d2v8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c1ark")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xbprs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bglq2")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_73ixs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_tntyy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tvqlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_anuc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tntyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_atqr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_i00nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ra1i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lv1is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bf5wv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 13.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqmcy"]
+size = Vector2(203, 21.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rarfo"]
+font = ExtResource("22_7cpln")
+font_size = 31
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0.129412, 0.129412, 0.129412, 0.34902)
+shadow_offset = Vector2(2.645, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_behma"]
+bg_color = Color(0.67451, 0.588235, 0.133333, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 5
+border_color = Color(0.686275, 0.501961, 0.0196078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3acjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbwta"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2t7d"]
+bg_color = Color(0.521569, 0.486275, 0.427451, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 5
+border_color = Color(0.364706, 0.341176, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ep4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bou7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xy0io"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xogvv"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7s503")
+metadata/_edit_horizontal_guides_ = [-170.0]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_0ek66")
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
+offset_right = 1151.0
+offset_bottom = 510.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ColorRect"]
+position = Vector2(576, 255.5)
+scale = Vector2(2, 1.57716)
+texture = ExtResource("4_36ima")
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(575.5, 255.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(0.538036, 0)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("5_ii7ld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(1152, 0)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("5_ii7ld")
+
+[node name="Landscape" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(575.5, 255.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Landscape"]
+position = Vector2(0.538036, 50)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("6_2sq21")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Landscape"]
+position = Vector2(1152, 50)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("6_2sq21")
+
+[node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(575.5, 255.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trees"]
+position = Vector2(0.538036, 100)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("7_adb41")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Trees"]
+position = Vector2(1152, 100)
+scale = Vector2(1.99987, 1.577)
+texture = ExtResource("7_adb41")
+
+[node name="Ground" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(575.5, 255.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Ground"]
+position = Vector2(3.05176e-05, 365)
+scale = Vector2(0.66532, 0.562767)
+texture = ExtResource("8_1l848")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Ground"]
+position = Vector2(1152, 365)
+scale = Vector2(0.66532, 0.562767)
+texture = ExtResource("8_1l848")
+
+[node name="duckspeed" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/duckspeed"]
+visible = false
+position = Vector2(1270, 159)
+texture = ExtResource("8_cl1iy")
+
+[node name="objectspeed" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/objectspeed"]
+visible = false
+position = Vector2(1270, 159)
+texture = ExtResource("8_cl1iy")
+
+[node name="Odin" type="CharacterBody2D" parent="."]
+position = Vector2(101, 469)
+script = ExtResource("8_nv530")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Odin"]
+position = Vector2(-31.5, 91)
+scale = Vector2(0.45583, 0.54054)
+sprite_frames = SubResource("SpriteFrames_jgo0o")
+animation = &"hurt"
+autoplay = "jump"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Odin"]
+position = Vector2(-28, 81)
+polygon = PackedVector2Array(50, -23, 61, -9, 34, 3, 52, 28, 42, 38, 13, 19, -14, 15, -47, 40, -61, 31, -36, 3, -63, -12, -38, -12, -17, -12, 21, -13)
+
+[node name="Layout Collisions" type="StaticBody2D" parent="."]
+
+[node name="Groundcollision" type="CollisionShape2D" parent="Layout Collisions"]
+position = Vector2(203, 626.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_gqmcy")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Scores" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 286.0
+offset_top = 232.0
+offset_right = 326.0
+offset_bottom = 272.0
+
+[node name="Insruction" type="Label" parent="Scores"]
+custom_minimum_size = Vector2(0.15, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_right = 479.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+text = "Press Space or Up Key to Start"
+label_settings = SubResource("LabelSettings_rarfo")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="score_label" type="Label" parent="Scores"]
+layout_mode = 0
+offset_left = -222.0
+offset_top = -215.0
+offset_right = -55.0
+offset_bottom = -185.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+
+[node name="score_label2" type="Label" parent="Scores"]
+layout_mode = 0
+offset_left = -273.0
+offset_top = -215.0
+offset_right = -221.0
+offset_bottom = -185.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+text = "Score: "
+
+[node name="Buttons" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Restart" type="Button" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 852.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("23_ge6sp")
+theme_override_styles/hover = ExtResource("24_undix")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_behma")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3acjf")
+text = "RESTART"
+
+[node name="MenuButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 9.0
+offset_right = 1140.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("24_jsy0s")
+theme_override_styles/hover = ExtResource("25_spmsf")
+theme_override_styles/pressed = ExtResource("25_0l0xl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xbwta")
+text = "Menu"
+
+[node name="SettingsButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 10.0
+offset_right = 1041.0
+offset_bottom = 60.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_7cpln")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("27_gmula")
+theme_override_styles/hover = ExtResource("27_gmula")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l2t7d")
+theme_override_styles/disabled = ExtResource("27_gmula")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xbwta")
+action_mode = 0
+text = "Settings"
+
+[node name="HighScore" type="Node2D" parent="."]
+top_level = true
+script = ExtResource("19_gfkei")
+
+[node name="high_score_label" type="Label" parent="HighScore"]
+offset_left = 13.0
+offset_top = 60.0
+offset_right = 153.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("22_7cpln")
+
+[node name="Soundtracks" type="Node2D" parent="."]
+
+[node name="Backgroundmusic" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("28_b2p4l")
+bus = &"Music"
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("29_ghm6o")
+volume_db = -15.0
+bus = &"SoundFx"
+
+[node name="SadSound1" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("30_ncasa")
+bus = &"SoundFx"
+
+[node name="SadSound2" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("31_bjqnx")
+bus = &"SoundFx"
+
+[node name="PantSound" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("32_mhgoo")
+volume_db = 2.08
+bus = &"SoundFx"
+
+[node name="BarkSound" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("32_kmwgf")
+bus = &"SoundFx"
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("34_50ajm")
+bus = &"SoundFx"
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="Soundtracks"]
+stream = ExtResource("35_eegfw")
+volume_db = 11.787
+bus = &"SoundFx"
+
+[node name="Start" type="Button" parent="."]
+modulate = Color(0.109804, 0.109804, 0.109804, 0.478431)
+top_level = true
+offset_left = -1.0
+offset_top = 69.0
+offset_right = 1152.0
+offset_bottom = 654.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3ep4m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bou7m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xy0io")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xogvv")
+action_mode = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Start" to="Odin" method="_on_button_pressed"]
